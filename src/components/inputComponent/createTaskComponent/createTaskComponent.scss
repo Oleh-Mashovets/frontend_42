@@ -1,0 +1,54 @@
+@import "../../../tools.scss";
+
+
+.header {
+    width: $sizePercent;
+    background-color: $mainColor;
+    @include setPadding(50px 0 0);
+  
+    .header__todo {
+      width: $sizePercent/2.5;
+      @include setMargin(0 auto);
+      @include setPadding(50px);
+      @include borderR(50px 50px 0 0);
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  
+      background-color: $primaryColor;
+  
+      .input__todo {
+        flex: 1.5;
+        height: $size/2 + px;
+        @include setMargin(0 10px 0 0);
+        outline: none;
+        @include borderR(15px);
+        @include bor(0);
+        @include setPadding(0 30px);
+        font-size: $textFontSize * 1.2;
+  
+        &::placeholder {
+          color: $specialyColor;
+        }
+      }
+  
+      .button__todo {
+        flex: 1;
+        height: $size/2 + px;
+        cursor: pointer;
+        @include borderR(15px);
+        @include bor(0);
+        font-size: $textFontSize * 1.2;
+        font-weight: 600;
+        background-color: $secondaryColor;
+        color: $totalColor;
+  
+        &:active {
+          background-color: $mainColor;
+          scale: 0.9;
+        }
+      }
+    }
+  }
